@@ -3,7 +3,9 @@ function computerPlayer() {
     return choices[Math.floor(Math.random() * choices.length)];
 }
 
-function playRound(computerSelection, playerSelection) {
+function playRound() {
+    let computerSelection = computerPlayer();
+    let playerSelection = prompt("Enter your selection: ");
     playerSelection = playerSelection.toLowerCase();
 
     if (computerSelection == "rock") {
@@ -22,7 +24,7 @@ function playRound(computerSelection, playerSelection) {
         } else {
             return "Tie";
         } 
-    } else if (computerSelection == "scissors" && playerSelection == "") {
+    } else if (computerSelection == "scissors") {
         if (playerSelection == "rock") {
             return "You Win! Rock beats Scissors";
         } else if (playerSelection == "paper") {
@@ -33,7 +35,31 @@ function playRound(computerSelection, playerSelection) {
     }
 }
 
-const computerSelection = computerPlayer();
-const playerSelection = prompt("Enter your selection: ");
+function game() {
+    let playerScore = 0;
+    let computerScore = 0;
 
-console.log(playRound(playerSelection, computerSelection));
+    for(let i = 0; i < 5; i++) {
+        const round = playRound();
+        console.log(round);
+
+        if(round.includes("Win")) {
+            playerScore++;
+        } else if(round.includes("Lose")) {
+            computerScore++;
+        }
+    }
+
+    console.log(`Player Score: ${playerScore}`);
+    console.log(`Computer Score: ${computerScore}`);
+    
+    if(playerScore > computerScore) {
+        return "You beat the Computer!";
+    } else if (playerScore < computerScore) {
+        return "The computer beat you!"
+    } else {
+        return "It was a tie!";
+    }
+}
+
+console.log(game());
