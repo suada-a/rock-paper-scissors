@@ -4,33 +4,6 @@ function computerPlayer() {
     return choices[Math.floor(Math.random() * choices.length)];
 }
 
-function player() {
-    const rockButton = document.querySelector(".rock");
-    const paperButton = document.querySelector(".paper");
-    const scissorsButton = document.querySelector(".scissors");
-    let playerOptions = [rockButton, paperButton, scissorsButton];
-    let playerSelection = "";
-
-    // playerOptions.forEach(option => {
-    //     option.addEventListener("click", function(){
-    //         playerSelection = document.getAttribute("data-property");
-    //     }); 
-    // });
-
-    rockButton.addEventListener("click", function() {
-        playerSelection = 'rock';
-    });
-    paperButton.addEventListener("click", function() {
-        playerSelection = 'paper';
-    });
-    scissorsButton.addEventListener("click", function() {
-        playerSelection = 'scissors';
-    });
-
-    console.log(playerSelection)
-    return playerSelection;
-}
-
 function playRound(playerSelection) {
     playerSelection = playerSelection.replace(/[\n\r]+|[\s]{2,}/g, ' ').trim().toLowerCase();
     computerSelection = computerPlayer();
