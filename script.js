@@ -58,19 +58,15 @@ function playRound(playerSelection) {
             playerScoreboard.textContent = playerScore.toString();
             result.textContent = "You Win! Paper beats Rock";
         } else if (playerSelection === "scissors") {
-            computerScore++;;
+            computerScore++;
             computerScoreboard.textContent = computerScore.toString();
             result.textContent = "You Lose! Rock beats Scissors";
         } else if (playerSelection === computerSelection) {
-            playerScore++;
-            playerScoreboard.textContent = playerScore.toString();
-            computerScore++;
-            computerScoreboard.textContent = computerScore.toString();
             result.textContent = "Tie";
         }
     } else if (computerSelection === "paper") {
         if (playerSelection === "rock") {
-            computerScore++;;
+            computerScore++;
             computerScoreboard.textContent = computerScore.toString();
             result.textContent = "You Lose! Paper beats Rock";
         } else if (playerSelection === "scissors") {
@@ -78,10 +74,6 @@ function playRound(playerSelection) {
             playerScoreboard.textContent = playerScore;
             result.textContent = "You Win! Scissors beat Paper";
         } else if (playerSelection === computerSelection) {
-            playerScore++;
-            playerScoreboard.textContent = playerScore.toString();
-            computerScore++;
-            computerScoreboard.textContent = computerScore.toString();
             result.textContent = "Tie";
         } 
     } else if (computerSelection === "scissors") {
@@ -94,10 +86,6 @@ function playRound(playerSelection) {
             computerScoreboard.textContent = computerScore;
             result.textContent = "You Lose! Scissors beats Rock";
         } else if (playerSelection === computerSelection) {
-            playerScore++;
-            playerScoreboard.textContent = playerScore.toString();
-            computerScore++;
-            computerScoreboard.textContent = computerScore.toString();
             result.textContent = "Tie";
         }
     }
