@@ -11,7 +11,7 @@
     </head>
     <body>
         <div class="game"> 
-            <header>
+            <div class="game-info">
                 <h1 class="title">Rock Paper Scissors</h1>
                 <p class="instructions">
                     To play, select either rock, paper or scissors.
@@ -20,9 +20,9 @@
                     The player that wins the round earns a point.
                 </p>
                 <p class="instructions">
-                    The player with the most points after 6 rounds wins!
+                    The player with the most points after 3 rounds wins!
                 </p>
-            </header>
+            </div>
             <div class="gameboard">
                 <div class="score-info">
                     <div class="player-score-info">
@@ -34,7 +34,10 @@
                         <p class="computer-score">0</p>
                     </div>
                 </div>
-                <div class="result">Press a button to start.</div>
+                <div class="result">Press a button to start</div>
+                <button class="new-game">
+                    <p>New Game</p>
+                </button>
                 <div class="buttons">
                     <button class="rock">
                         <img src="../image/rock.png" alt="rock">
